@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>YATZY</title>
+<script type="text/javascript" src="yatzyjsB.js"></script>
+</head>
+
+<body>
+<h1>YATZY</h1>
+<p><input type="button" onclick="init();" id="start" value="Starta spelet"></p>
+<p>Antal spelare: <span id="antalSpelare"></span> | Kastomgång: <span id="kastOmgong">0</span></p>
+<p>Spelare <span id="tur"></span> Kast</p>
+<p><input type="button" onclick="throwDices();" value="Kasta"></p>
+<table border="1">
+  <tr>
+    <td>Tärning 1</td>
+    <td>Tärning 2</td>
+    <td>Tärning 3</td>
+    <td>Tärning 4</td>
+    <td>Tärning 5</td>
+  </tr>
+  <tr>
+    <td><img id="Dice1" src="yatzy-bilder/1.gif" alt="" width="66" height="66"></td>
+    <td><img id="Dice2" src="yatzy-bilder/1.gif" alt="" width="66" height="66"></td>
+    <td><img id="Dice3" src="yatzy-bilder/1.gif" alt="" width="66" height="66"></td>
+    <td><img id="Dice4" src="yatzy-bilder/1.gif" alt="" width="66" height="66"></td>
+    <td><img id="Dice5" src="yatzy-bilder/1.gif" alt="" width="66" height="66"></td>
+  </tr>
+  <tr>
+    <td>Lås 
+    <input id="Lock1" type="checkbox" name="checkbox"></td>
+    <td><input id="Lock2" type="checkbox" name="checkbox2" ></td>
+    <td><input id="Lock3" type="checkbox" name="checkbox3"></td>
+    <td><input id="Lock4" type="checkbox" name="checkbox4"></td>
+    <td><input id="Lock5" type="checkbox" name="checkbox5"></td>
+  </tr>
+</table>
+
+<table width="350" border="1">
+  <tr>
+    <td><b>Spelare</b></td>
+    <td width="50"><b>1</b></td>
+	<td width="50"><b>2</b></td>
+	<td width="50"><b>3</b></td>
+	<td width="50"><b>4</b></td>
+  </tr>
+  <tr>
+    <td>Ettor</td>
+    <td onClick="bokfor(1,1,this);" id="x1_1"></td>
+	<td onClick="bokfor(1,2,this);" id="x1_2"></td>
+	<td onClick="bokfor(1,3,this);" id="x1_3"></td>
+	<td onClick="bokfor(1,4,this);" id="x1_4"></td>
+  </tr>
+  <tr>
+    <td>Tvåor</td>
+    <td onClick="bokfor(2,1,this);" id="x2_1"></td>
+	<td onClick="bokfor(2,2,this);" id="x2_2"></td>
+	<td onClick="bokfor(2,3,this);" id="x2_3"></td>
+	<td onClick="bokfor(2,4,this);" id="x2_4"></td>
+  </tr>
+  <tr>
+    <td>Treor</td>
+    <td onClick="bokfor(3,1,this);" id="x3_1"></td>
+	<td onClick="bokfor(3,2,this);" id="x3_2"></td>
+	<td onClick="bokfor(3,3,this);" id="x3_3"></td>
+	<td onClick="bokfor(3,4,this);" id="x3_4"></td>
+  </tr>
+  <tr>
+    <td>Fyror</td>
+    <td onClick="bokfor(4,1,this);" id="x4_1"></td>
+	<td onClick="bokfor(4,2,this);" id="x4_2"></td>
+	<td onClick="bokfor(4,3,this);" id="x4_3"></td>
+	<td onClick="bokfor(4,4,this);" id="x4_4"></td>
+  </tr>
+  <tr>
+    <td>Femor</td>
+    <td onClick="bokfor(5,1,this);" id="x5_1"></td>
+	<td onClick="bokfor(5,2,this);" id="x5_2"></td>
+	<td onClick="bokfor(5,3,this);" id="x5_3"></td>
+	<td onClick="bokfor(5,4,this);" id="x5_4"></td>
+  </tr>
+  <tr>
+    <td>Sexor</td>
+    <td onClick="bokfor(6,1,this);" id="x6_1"></td>
+	<td onClick="bokfor(6,2,this);" id="x6_2"></td>
+	<td onClick="bokfor(6,3,this);" id="x6_3"></td>
+	<td onClick="bokfor(6,4,this);" id="x6_4"></td>
+  </tr>
+  <tr>
+    <td><b>Summa</b></td>
+    <td id="summa1"></td>
+	<td id="summa2"></td>
+	<td id="summa3"></td>
+	<td id="summa4"></td>
+  </tr>
+  <tr>
+    <td><b>Bonus</b></td>
+    <td id="bonus1"></td>
+	<td id="bonus2"></td>
+	<td id="bonus3"></td>
+	<td id="bonus4"></td>
+  </tr>
+  <tr>
+    <td>Par</td>
+    <td onClick="bokfor(7,1,this);" id="x7_1"></td>
+	<td onClick="bokfor(7,2,this);" id="x7_2"></td>
+	<td onClick="bokfor(7,3,this);" id="x7_3"></td>
+	<td onClick="bokfor(7,4,this);" id="x7_4"></td>
+  </tr>
+  <tr>
+    <td>Två par</td>
+    <td onClick="bokfor(8,1,this);" id="x8_1"></td>
+	<td onClick="bokfor(8,2,this);" id="x8_2"></td>
+	<td onClick="bokfor(8,3,this);" id="x8_3"></td>
+	<td onClick="bokfor(8,4,this);" id="x8_4"></td>
+  </tr>
+  <tr>
+    <td>Tretal</td>
+    <td onClick="bokfor(9,1,this);" id="x9_1"></td>
+	<td onClick="bokfor(9,2,this);" id="x9_2"></td>
+	<td onClick="bokfor(9,3,this);" id="x9_3"></td>
+	<td onClick="bokfor(9,4,this);" id="x9_4"></td>
+  </tr>
+  <tr>
+    <td>Fyrtal</td>
+    <td onClick="bokfor(10,1,this);" id="x10_1"></td>
+	<td onClick="bokfor(10,2,this);" id="x10_2"></td>
+	<td onClick="bokfor(10,3,this);" id="x10_3"></td>
+	<td onClick="bokfor(10,4,this);" id="x10_4"></td>
+  </tr>
+  <tr>
+    <td>Liten stege</td>
+    <td onClick="bokfor(11,1,this);" id="x11_1"></td>
+	<td onClick="bokfor(11,2,this);" id="x11_2"></td>
+	<td onClick="bokfor(11,3,this);" id="x11_3"></td>
+	<td onClick="bokfor(11,4,this);" id="x11_4"></td>
+  </tr>
+  <tr>
+    <td>Stor stege</td>
+    <td onClick="bokfor(12,1,this);" id="x12_1"></td>
+	<td onClick="bokfor(12,2,this);" id="x12_2"></td>
+	<td onClick="bokfor(12,3,this);" id="x12_3"></td>
+	<td onClick="bokfor(12,4,this);" id="x12_4"></td>
+  </tr>
+  <tr>
+    <td>Kåk</td>
+    <td onClick="bokfor(13,1,this);" id="x13_1"></td>
+	<td onClick="bokfor(13,2,this);" id="x13_2"></td>
+	<td onClick="bokfor(13,3,this);" id="x13_3"></td>
+	<td onClick="bokfor(13,4,this);" id="x13_4"></td>
+  </tr>
+  <tr>
+    <td>Chans</td>
+    <td onClick="bokfor(14,1,this);" id="x14_1"></td>
+	<td onClick="bokfor(14,2,this);" id="x14_2"></td>
+	<td onClick="bokfor(14,3,this);" id="x14_3"></td>
+	<td onClick="bokfor(14,4,this);" id="x14_4"></td>
+  </tr>
+  <tr>
+    <td>Yatzy</td>
+    <td onClick="bokfor(15,1,this);" id="x15_1"></td>
+	<td onClick="bokfor(15,2,this);" id="x15_2"></td>
+	<td onClick="bokfor(15,3,this);" id="x15_3"></td>
+	<td onClick="bokfor(15,4,this);" id="x15_4"></td>
+  </tr>
+  <tr>
+    <td><b>Total</b></td>
+    <td id="total1"></td>
+	<td id="total2"></td>
+	<td id="total3"></td>
+	<td id="total4"></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

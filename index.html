@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]> <html lang="sv" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="sv" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="sv"> <!--<![endif]-->
+<head>
+<!-- meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title></title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="http://zencodez.net/yap-goodies/css/global2.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" />
+
+<!-- javascript -->
+<script src="http://static.zencodez.net/js.php?f=jquery-1.5,jquery-ui-1.8,css3finalize-latest"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+header {
+	text-align: center;
+}
+footer {
+	color: #aaa;
+	font-size; 9px;
+	font-style: italic;
+}
+h1 {
+	display: inline-block;
+	font-size: 50px;
+	transition: transform 1.5s, background-color 1.5s, color 1.5s;
+}
+h1:hover {
+	border:5px solid #fff;
+	background-color: #333;
+	color: #fff;
+	transform: scale(2) translatey(30px);
+}
+
+h2 {
+	color: #999;
+	font-size: 20px;
+}
+
+a {
+	color: #333;
+	padding-left: 17px;
+	transition: color 0.5s;
+}
+a:hover {
+	color: #red;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+
+a.inactive {
+	opacity: 0.2;
+	transition: opacity 2s;
+}
+a.inactive:hover:after {
+	content: " (inactive)";
+	font-size: 20px;
+	font-weight: bold;
+}
+a.inactive:hover {
+	opacity: 1;
+}
+
+a + .tooltip {
+	background-color: #eee;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	font-size: 12px;
+	transition: opacity 1s;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	padding: 3px;
+	position: absolute;
+	left: 0;
+	top: 20px;
+	white-space: nowrap;
+}
+
+a:hover + .tooltip {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+
+.tooltip-wrap {
+	position: relative;
+}
+
+section a {
+	background-size: 16px 16px;
+}
+
+.blogger {
+	background: url(http://codler.blogspot.com/favicon.ico) no-repeat;
+}
+.stackoverflow {
+	background: url(http://stackoverflow.com/favicon.ico) no-repeat;
+}
+.github {
+	background: url(https://github.com/favicon.ico) no-repeat;
+}
+.userscripts {
+	background: url(http://userscripts.org/images/script_icon.png) no-repeat;
+}
+.eforum {
+	background: url(http://eforum.idg.se/favicon.ico) no-repeat;
+}
+.inviteshare {
+	background: url(http://inviteshare.com/favicon.ico) no-repeat;
+}
+.metroroll {
+	background: url(http://metroroll.zencodez.net/favicon.ico) no-repeat;
+}
+.aldstayngstavan {
+	background: url(aldstayngstavan.gif) no-repeat;
+}
+.debattera {
+	background: url(debattera.gif) no-repeat;
+}
+
+
+.steam {
+	background: url(http://steamcommunity.com/favicon.ico) no-repeat;
+}
+.wowhead {
+	background: url(http://www.wowhead.com/favicon.ico) no-repeat;
+}
+.xfire {
+	background: url(http://www.xifre.com/favicon.ico) no-repeat;
+}
+.runescape {
+	background: url(https://runescape.com/favicon.ico) no-repeat;
+}
+
+</style>
+<script>
+jQuery(function ($) {
+	var stackoverflow, github, css3finalize, ajaxupload;
+
+	// Stackoverflow
+	stackoverflow = $.getJSON('http://api.stackoverflow.com/1.1/users/304894?jsonp=?', function(data) {
+		var element = $('.stackoverflow');
+		element.data('reputation', data.users[0].reputation);
+		element.data('gold', data.users[0].badge_counts.gold);
+		element.data('silver', data.users[0].badge_counts.silver);
+		element.data('bronze', data.users[0].badge_counts.bronze);
+		
+		var text = '<b>Reputation:</b> ' + element.data('reputation');
+		text += '<br/><b>Badges:</b> <br/>' + element.data('gold') + 'gold, ' + element.data('silver') + 'silver, ' + element.data('bronze') + 'bronze';
+		
+		element.wrap('<span class="tooltip-wrap"/>');
+		$('<span/>').addClass('tooltip').html(text).insertAfter(element);
+	});
+	
+	// Github
+	github = $.getJSON('https://github.com/api/v2/json/user/show/codler?callback=?', function(data) {
+		var element = $('.github');
+		element.data('public_repo', data.user.public_repo_count);
+		
+		var text = '<b>Repositories:</b> ' + element.data('public_repo');
+				
+		element.wrap('<span class="tooltip-wrap"/>');
+		$('<span/>').addClass('tooltip').html(text).insertAfter(element);
+	});
+	
+	
+	// Jquery Css3 finalize
+	css3finalize = $.getJSON('https://github.com/api/v2/json/repos/show/codler/jQuery-Css3-Finalize?callback=?', function(data) {
+		var element = $('.css3finalize');
+		element.data('watchers', data.repository.watchers);
+		element.data('forks', data.repository.forks);
+		element.data('description', data.repository.description);
+		
+		var text = '<b>Watchers:</b> ' + element.data('watchers');
+		text += '<br/><b>Forks:</b> ' + element.data('forks');
+				
+		element.wrap('<span class="tooltip-wrap"/>');
+		$('<span/>').addClass('tooltip').html(text).insertAfter(element);
+	});
+	
+	// Jquery Ajax Upload
+	ajaxupload = $.getJSON('https://github.com/api/v2/json/repos/show/codler/jQuery-Ajax-Upload?callback=?', function(data) {
+		var element = $('.ajaxupload');
+		element.data('watchers', data.repository.watchers);
+		element.data('forks', data.repository.forks);
+		element.data('description', data.repository.description);
+		
+		var text = '<b>Watchers:</b> ' + element.data('watchers');
+		text += '<br/><b>Forks:</b> ' + element.data('forks');
+				
+		element.wrap('<span class="tooltip-wrap"/>');
+		$('<span/>').addClass('tooltip').html(text).insertAfter(element);
+	});
+	
+	$.when(stackoverflow, github, css3finalize, ajaxupload);
+});
+</script>
+</head>
+<body>
+<!--[if lt IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a></div> <![endif]-->
+<header>
+	<h1>Han Lin Yap</h1>
+	<br />
+	<img src="http://chart.apis.google.com/chart?chs=200x200&cht=qr&chld=|0&chl=http%3A%2F%2Fzencodez.net" alt="qrcode" width="64" alt="qrcode" />
+	<img src="http://www.gravatar.com/avatar/d400866ed03267fc211e1bdd1010ca96?s=128&d=identicon&r=PG" width="64" alt="gavatar" />
+</header>
+<section>
+<h2>Profiles</h2>
+<p>
+	<a href="http://codler.blogspot.com" class="blogger">Blogger</a>
+	<a href="http://stackoverflow.com/users/304894/codler" class="stackoverflow">Stackoverflow</a>
+	<a href="https://github.com/codler" class="github">Github</a>
+	<a href="http://userscripts.org/users/codler" class="userscripts inactive">Userscripts.org</a>
+	<a href="http://eforum.idg.se/user/44585-codler/" class="eforum inactive">Eforum</a>
+	<a href="http://www.inviteshare.com/viewprofile.php?id=11119" class="inviteshare inactive">InviteShare</a>
+	
+</p>
+
+<h2>My sites</h2>
+<p>
+	<a href="http://metroroll.zencodez.net/" class="metroroll">Metroroll</a>
+	<a href="http://ingrediens.se/">Ingrediens</a>
+	<a href="http://jaggillarattgilla.se/">Jag gillar att gilla</a>
+	<a href="http://ventrilohost.se/">Ventrilo Host</a>
+	<a href="http://heroesofconquest.se/" class="inactive">Heroes of Conquest</a>
+	<a href="http://blogg.zida.se/" class="inactive">Blogg zida</a>
+</p>
+
+<h2>Jquery plugins</h2>
+<p>
+	<a href="https://github.com/codler/jQuery-Css3-Finalize" class="css3finalize">Css3 finalize</a>
+	<a href="https://github.com/codler/jQuery-Ajax-Upload" class="ajaxupload">Ajax Upload</a>
+</p>
+
+<h2>Facebook application</h2>
+<p>
+	<a href="http://apps.facebook.com/aldstayngstavan/" class="aldstayngstavan">Vem är din äldsta/yngsta vän?</a>
+	<a href="http://apps.facebook.com/devtools/" class="devtools">Developer Tools</a>	
+	<a href="http://apps.facebook.com/debattera/" class="debattera inactive">Debattera</a>
+</p>
+
+<h2>Old portfolio</h2>
+<p>
+	<a href="old_index2.html" class="old-portfolio">Projects 2</a>
+	<a href="old_index1.html" class="inactive">Projects 1</a>
+</p>
+
+<h2>Contact</h2>
+<img src="http://metroroll.zencodez.net/ref/email.php" />
+
+<hr />
+<h2>Game Profiles</h2>
+<p>
+	<a href="http://steamcommunity.com/profiles/76561197974890217/" class="steam">Steam</a>
+	<a href="http://www.wowhead.com/user=codler#characters" class="wowhead">Wowhead</a>
+	<a href="http://www.xfire.com/profile/darkluna/" class="xfire inactive">Xfire</a>
+	<a href="http://services.runescape.com/m=hiscore/hiscorepersonal.ws?user1=i%20vs%20king" class="runescape inactive">RuneScape</a>
+	
+	
+</p>
+
+</section>
+<footer>
+<p>Last modified 2011-03-04</p>
+
+<!--[if lt IE 9]>
+<div id="browser_msie">
+<p>You are using Internet Explorer<br />
+Recommend using one of the following<br />
+<a href="http://www.google.com/chrome"><img border="0" width="128" height="128" src="/yap-goodies/images/Chrome.png" title="Chrome" /></a>
+<a href="http://www.mozilla.com?from=sfx&amp;uid=188254&amp;t=561"><img border="0" width="128" height="128" src="/yap-goodies/images/Firefox.png" title="Firefox" /></a>
+<a href="http://www.opera.com/"><img border="0" width="128" height="128" src="/yap-goodies/images/Opera.png" title="Opera" /></a>
+<a href="http://www.apple.com/safari/"><img border="0" width="128" height="128" src="/yap-goodies/images/Safari.png" title="Safari" /></a>
+</p>
+</div>
+<![endif]-->
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1944741-2']);
+  _gaq.push(['_setDomainName', '.zencodez.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+var woo_settings = {idle_timeout:'300000', domain:'project.zencodez.net'};
+var woo_actions = [{type:'pageview',url:window.location.pathname+window.location.search,title:document.title}];
+(function(){
+var wsc = document.createElement('script');
+wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+wsc.type = 'text/javascript';
+wsc.async = true;
+var ssc = document.getElementsByTagName('script')[0];
+ssc.parentNode.insertBefore(wsc, ssc);
+})();
+</script>
+</body>
+</html>

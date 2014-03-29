@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding="utf-8"?>
+<projects>
+	<project>
+		<name>Homemade Forum</name>
+		<type>Latest</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique>Jquery</technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">24 Mars 2010</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">19 Mars 2010</date>
+		</dates>
+		<image>Homemadeforum_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit forum</label>
+			<link>
+				<label>http://www.zencodez.net/forum/</label>
+				<url>http://www.zencodez.net/forum/</url>
+			</link>
+		</links>
+		<description>A simple open forum where no registation is needed. It has ajax driven pagination, a autocompletion search, undo feature upon thread/post removal, set sticky threads, emoticon, detect links, detect images and possible to make it to private forum.</description>
+	</project>
+	<project>
+		<name>Rebellious Tower Defence (RTD)</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>C++</technique>
+			<technique>SDL</technique>
+			<technique>SVN</technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">14 December 2009</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">29 October 2009</date>
+		</dates>
+		<image>Rebellioustowerdefence_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Download game</label>
+			<link>
+				<label>RebelliousTowerDefence_Windows.rar (Windows)</label>
+				<url>RebelliousTowerDefence_Windows.rar</url>
+			</link>
+			<link>
+				<label>RebelliousTowerDefence_Ubuntu.rar (Linux)</label>
+				<url>RebelliousTowerDefence_Ubuntu.rar</url>
+			</link>
+		</links>
+		<links>
+			<label>Download our source code</label>
+			<link>
+				<label>RebelliousTowerDefence_SourceCode.rar</label>
+				<url>RebelliousTowerDefence_SourceCode.rar</url>
+			</link>
+		</links>
+		<links>
+			<label>Journal</label>
+			<link>
+				<label>Google Notebook</label>
+				<url>http://www.google.com/notebook/public/15502429618632229265/BDRxB5goQjvqCjMkk</url>
+			</link>
+		</links>
+		<links>
+			<label>Specifications</label>
+			<link>
+				<label>RebelliousTowerDefence_kravspecifikation_rev1.pdf</label>
+				<url>RebelliousTowerDefence_kravspecifikation_rev1.pdf</url>
+			</link>
+		</links>
+		<description>A Tower Defence Game.</description>
+	</project>
+	<project>
+		<name>Portfolio</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>Python</technique>
+			<technique>Kid-template</technique>
+			<technique>Jquery</technique>
+			<technique>SVN</technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">13 October 2009</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">16 September 2009</date>
+		</dates>
+		<image>Portfolio_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Download my source code</label>
+			<link>
+				<label>Portfolio.zip</label>
+				<url>Portfolio.zip</url>
+			</link>
+			<link>
+				<label>Portfolio.rar</label>
+				<url>Portfolio.rar</url>
+			</link>
+			<link>
+				<label>Portfolio.tar.gz</label>
+				<url>Portfolio.tar.gz</url>
+			</link>
+		</links>
+		<links>
+			<label>Journal</label>
+			<link>
+				<label>Google Notebook</label>
+				<url>http://www.google.com/notebook/public/15502429618632229265/BDWZu5goQ_M6Krbgk</url>
+			</link>
+		</links>
+		<links>
+			<label>Reflection</label>
+			<link>
+				<label>Portfolio_reflektion.pdf</label>
+				<url>Portfolio_reflektion.pdf</url>
+			</link>
+		</links>
+		<description>Portfolio of my schoolwork.</description>
+	</project>
+	<project>
+		<name>Prinsdesign</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">29 Juli 2009</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">27 Juli 2009</date>
+		</dates>
+		<image>Prinsdesign_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.prinsdesign.se/</label>
+				<url>http://www.prinsdesign.se/</url>
+			</link>
+		</links>
+		<description>A making websites site =)</description>
+	</project>
+	<project>
+		<name>Äldsta yngsta vän</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Last update</label>
+			<date type="release">30 August 2009</date>
+		</dates>
+		<dates>
+			<label>Release</label>
+			<date type="release">6 June 2008</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">6 June 2008</date>
+		</dates>
+		<image>no_image.png</image>
+		<images></images>
+		<links>
+			<label>Visit application</label>
+			<link>
+				<label>http://apps.facebook.com/aldstayngstavan/</label>
+				<url>http://apps.facebook.com/aldstayngstavan/</url>
+			</link>
+		</links>
+		<description>A facebook applikation where you can see your oldest and youngest friend.</description>
+	</project>
+	<project>
+		<name>RuneCrafter</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>C#</technique>
+			<technique>XNA 3</technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">26 April 2009</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">5 February 2009</date>
+		</dates>
+		<dates>
+			<label>Pre start</label>
+			<date type="release">30 August 2009</date>
+		</dates>
+		<image>RuneCrafter_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Download</label>
+			<link>
+				<label>RuneCrafter.zip</label>
+				<url>RuneCrafter.zip</url>
+			</link>
+			<link>
+				<label>RuneCrafter.rar</label>
+				<url>RuneCrafter.rar</url>
+			</link>
+		</links>
+		<links>
+			<label>Journal</label>
+			<link>
+				<label>Google Notebook</label>
+				<url>http://www.google.com/notebook/public/15502429618632229265/BDQelIwoQ4JPdlMIj</url>
+			</link>
+		</links>
+		<links>
+			<label>Presentation</label>
+			<link>
+				<label>Prezi</label>
+				<url>http://prezi.com/36811/</url>
+			</link>
+		</links>
+		<links>
+			<label>Report</label>
+			<link>
+				<label>RuneCrafter_rapport_rev3.pdf (Revision 3)</label>
+				<url>RuneCrafter_rapport_rev3.pdf</url>
+			</link>
+		</links>
+		<description>3D-game with multiplayer function.</description>
+	</project>
+	<project>
+		<name>Metroroll - Desktop</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>C#</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Release</label>
+			<date type="release">1 December 2008</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date type="start">24 November 2008</date>
+		</dates>
+		<image>MetrorollDesktop_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>This program is outdated.</label>
+		</links>
+		<description>A desktopapplication for Metroroll. An alternative way for users to access Metroroll's service "OnlineJustNu".</description>
+	</project>
+	<project>
+		<name>Metroroll</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique>Jquery</technique>
+		</techniques>
+		<dates>
+			<label>Last update</label>
+			<date>21 mars 2010</date>
+		</dates>
+		<dates>
+			<label>Version 3 released</label>
+			<date>1 September 2008</date>
+		</dates>
+		<dates>
+			<label>Version 2 released</label>
+			<date>17 February 2008</date>
+		</dates>
+		<dates>
+			<label>Version 2 released</label>
+			<date>16 August 2007</date>
+		</dates>
+		<image>Metroroll3_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://metroroll.zencodez.net/</label>
+				<url>http://metroroll.zencodez.net/</url>
+			</link>
+		</links>
+		<description>A service for providing websites with diffrent kind of counter, clock, playlist and referrals.</description>
+	</project>
+	<project>
+		<name>Debattera</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Last update</label>
+			<date>21 July 2008</date>
+		</dates>
+		<dates>
+			<label>Release</label>
+			<date>11 July 2008</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date>9 July 2008</date>
+		</dates>
+		<image>Debattera_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit application</label>
+			<link>
+				<label>http://apps.facebook.com/debattera/</label>
+				<url>http://apps.facebook.com/debattera/</url>
+			</link>
+		</links>
+		<description>A facebook applikation where you can debate.</description>
+	</project>
+	<project>
+		<name>Codler v.6</name>
+		<type>Projects</type>
+		<techniques>
+			<technique>ASP</technique>
+			<technique>Javascript</technique>
+		</techniques>
+		<dates>
+			<label>Last update</label>
+			<date>13 May 2007</date>
+		</dates>
+		<dates>
+			<label>Start</label>
+			<date>30 January 2007</date>
+		</dates>
+		<image>Codler6_Screenshot1.png</image>
+		<images>Codler6_Screenshot2.png</images>
+		<links>
+			<label>Download my source code</label>
+			<link>
+				<label>Codler6.rar</label>
+				<url>Codler6.rar</url>
+			</link>
+		</links>
+		<links>
+			<label>Design</label>
+			<link>
+				<label>Codler6_design.psd</label>
+				<url>Codler6_design.psd</url>
+			</link>
+		</links>
+		<description>Advanced Content Management System (CMS).</description>
+	</project>
+	<project>
+		<name>Sunda Basic</name>
+		<type>Works</type>
+		<techniques>
+			<technique>Flash and ActionScript</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>23 November 2009</date>
+		</dates>
+		<image>Sunda_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>View banner</label>
+			<link>
+				<label>sundabasic/336x280.swf</label>
+				<url>http://project.zencodez.net/sundabasic/336x280.swf</url>
+			</link>
+		</links>
+		<description>Task: Make a animated banner and in 11 diffrent sizes.</description>
+	</project>
+	<project>
+		<name>InfraCrete Sweden</name>
+		<type>Works</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>15 September 2009</date>
+		</dates>
+		<image>Infracrete_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.infracrete.se/</label>
+				<url>http://www.infracrete.se/</url>
+			</link>
+		</links>
+		<description>Task: Convert PSD to HTML and make a easy Content Management System (CMS).</description>
+	</project>
+	<project>
+		<name>Laine Lokalvård</name>
+		<type>Works</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>15 July 2009</date>
+		</dates>
+		<image>Lainelokalvard_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.lainelokalvard.se/</label>
+				<url>http://www.lainelokalvard.se/</url>
+			</link>
+		</links>
+		<description>Task: Convert PSD to HTML and make a easy Content Management System (CMS).</description>
+	</project>
+	<project>
+		<name>Vinyl UF</name>
+		<type>Works</type>
+		<techniques>
+			<technique>HTML</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>13 May 2009</date>
+		</dates>
+		<image>Vinyluf_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Site is down</label>
+			<link>
+				<label>http://www.vinyluf.se/</label>
+				<url></url>
+			</link>
+		</links>
+		<description>Task: Convert PSD to HTML.</description>
+	</project>
+	<project>
+		<name>Laine Fastighetsservice</name>
+		<type>Works</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique>Jquery</technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>27 February 2009</date>
+		</dates>
+		<image>Laine_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.lainefast.se/</label>
+				<url>http://www.lainefast.se/</url>
+			</link>
+		</links>
+		<description>Task: Convert PSD to HTML and make a easy Content Management System (CMS).</description>
+	</project>
+	<project>
+		<name>Yatzy in Javascript</name>
+		<type>Works</type>
+		<techniques>
+			<technique>Javascript</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>1 February 2009</date>
+		</dates>
+		<image>Yatzy_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit game</label>
+			<link>
+				<label>YatzyA.rar (Assignment A)</label>
+				<url>yatzyA.rar</url>
+			</link>
+			<link>
+				<label>YatzyB.rar (Assignment B)</label>
+				<url>yatzyB.rar</url>
+			</link>
+		</links>
+		<description>Task Solve two assignment. Make a game, Yatzy, by criteria.</description>
+	</project>
+	<project>
+		<name>Iam Store</name>
+		<type>Works</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique>Jquery</technique>
+			<technique>Flash</technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>10 December 2008</date>
+		</dates>
+		<image>Iamstore_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.iam-store.se/</label>
+				<url>http://www.iam-store.se/</url>
+			</link>
+		</links>
+		<description>Task Convert PSD to HTML, make a easy Content Management System (CMS) with Shopping cart.</description>
+	</project>
+	<project>
+		<name>Utge</name>
+		<type>Works</type>
+		<techniques>
+			<technique>PHP</technique>
+			<technique></technique>
+		</techniques>
+		<dates>
+			<label>Date</label>
+			<date>20 August 2008</date>
+		</dates>
+		<image>Utge_Screenshot.png</image>
+		<images></images>
+		<links>
+			<label>Visit site</label>
+			<link>
+				<label>http://www.utge.se/</label>
+				<url>http://www.utge.se/</url>
+			</link>
+		</links>
+		<description>Task Kind of a writing story game.</description>
+	</project>
+</projects>

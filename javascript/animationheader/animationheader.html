@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+<!--
+/* (CC) 2009 Han Lin Yap. Some Rights Reserved. */
+/* http://creativecommons.org/licenses/by/3.0  */
+/* This is licensed under a Creative Commons License. */
+
+$(document).ready(function() {
+	
+	var s = '', width = 840, height = 100;
+	window.anicurvWidth = width;
+	window.anicurvHeight = height;
+	window.anicurvCurv = height/2;
+	window.anicurvPos = 0;
+	window.anicurvColor = 'rgb(0,0,0)';
+	window.anicurvColorArray = Array(Array(255,255,255),Array(0,0,0),Array(255,0,0));
+	window.anicurvColorTrack = 0;
+	for (var i = 0; i < width; i++) {
+		s += "<span style='float:left;display:block;'><span style=\"background-color: #CCC;background-image: url('design.png');background-position: -"+i+"px 0px; width: 1px; height: "+(height/2)+"px; display:block;\" id='anicurv"+i+"'></span>";
+		s += "<span style=\"background-color: #CCC;background-image: url('design.png');background-position: -"+i+"px -"+(height/2)+"px; width: 1px; height: "+(height/2)+"px; display:block;\" id='ani2curv"+i+"'></span></span>";
+	}
+	// initiation
+	$("#header").append(s);
+	
+//	anicurv();
+	var hej = setTimeout("anicurv()",1000);
+
+});
+function anicurv() {
+		var randomHeight = parseInt(Math.random() * 10);
+		if (new Date().getSeconds() % 2 == 1) {
+			if (randomHeight > 5) {
+				window.anicurvCurv += randomHeight;
+			} else {
+				window.anicurvCurv -= randomHeight;	
+			}
+		} else {
+			if (randomHeight <= 5) {
+				window.anicurvCurv += randomHeight;
+			} else {
+				window.anicurvCurv -= randomHeight;	
+			}
+	
+		}
+		window.anicurvCurv = Math.max(Math.min(window.anicurvCurv,window.anicurvHeight), 0);
+		$("#header").find("#anicurv"+window.anicurvPos).css({ 
+			'backgroundColor' : window.anicurvColor,
+			'backgroundImage' : 'none',
+			'height' : window.anicurvCurv
+			});
+		$("#header").find("#ani2curv"+window.anicurvPos).css({ 
+			'backgroundPosition' : '-'+window.anicurvPos+'px -'+window.anicurvCurv+'px',
+			'height' : window.anicurvHeight - window.anicurvCurv
+		});
+		
+		window.anicurvColor = "rgb(" + [
+				Math.max(Math.min( parseInt(Math.random() * 150), 255), 0),
+				Math.max(Math.min( parseInt((window.anicurvPos * (window.anicurvColorArray[window.anicurvColorTrack+1][1] - window.anicurvColorArray[window.anicurvColorTrack][0])) + window.anicurvColorArray[window.anicurvColorTrack][1]), 255), 0),
+				Math.max(Math.min( parseInt((window.anicurvPos * (window.anicurvColorArray[window.anicurvColorTrack+1][2] - window.anicurvColorArray[window.anicurvColorTrack][0])) + window.anicurvColorArray[window.anicurvColorTrack][2]), 255), 0),
+			].join(",") + ")";
+		
+		window.anicurvPos++;
+		if (window.anicurvPos >= window.anicurvWidth) {
+			window.anicurvPos = 0;
+			window.anicurvColorTrack++;
+			if (window.anicurvColorTrack >= window.anicurvColorArray.length - 1) {
+				window.anicurvColorTrack = 0;
+			}
+		}
+		//alert(window.anicurvPos);
+		setTimeout("anicurv()",200);
+}
+-->
+</script>
+<style type="text/css">
+<!--
+#header {
+	position: relative;
+	background-image: url('design.png');
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="header"></div>
+d
+</body>
+</html>
